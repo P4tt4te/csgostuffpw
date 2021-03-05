@@ -11,29 +11,29 @@
 </head>
 
 <body>
-    
+
     <header>
-        <a href=#main id="boutonhome">
+        <button id="boutonhome" onclick="changementPage(0)">
             <img src="content/header/logo.png" />
-        </a>
+        </button>
     </header>
     <main>
-        <section id="main" class="acceuil">
+        <div id="main" class="acceuil" style="display:grid">
             <div class="title">
                 <p>Choose<br>Side</p>
             </div>
-            <a href=#liste>
-                <div class="side side_t">
+            <a id="boutonlistet">
+                <button class="side side_t" onclick="changementPage(1)">
                     <p>T</p>
-                </div>
+                </button>
             </a>
-            <a href=#liste id="boutonlistect">
-                <div class="side side_ct">
+            <a id="boutonlistect">
+                <button class="side side_ct" onclick="changementPage(1)">
                     <p>CT</p>
-                </div>
+                </button>
             </a>
-        </section>
-        <section id="liste">
+        </div>
+        <div id="liste" style="display:none">
             <ul class="conteneur_item">
                 <li class="pistol desert_eagle all"><img src="content/guns/weapons/pistols/CSGO_Desert_Eagle_Inventory.webp" /><div class="text_guns"><p>Desert Eagle</p><p class="money">700 $</p></div></li>
                 <li class="pistol r8_revolver all"><img src="content/guns/weapons/pistols/CSGO_R8_Revolver_Inventory.webp" /><div class="text_guns"><p>R8 Revolver</p><p class="money">600 $</p></div></li>
@@ -82,7 +82,7 @@
             </ul>
             <button class="view_inventory" onclick="masquer()"><p>View inventory</p></button>
             <div id="inventory" style="display:none"><p>Inventory</p><div class="inventory_list"></div><div class="total"><p>Total :</p><p class="somme_total money">10000 $</p></div></div>
-        </section>
+        </div>
     </main>
     <footer>
         <p class="signature transition">by edwbr</p>
@@ -90,7 +90,7 @@
         <a href="https://www.behance.net/edwbr"><img src="content/footer/logo_behance.svg" /></a>
         <a href="https://www.twitch.tv/p4tt4te"><img src="content/footer/logo_twitch.svg" class="twitch-logo" /></a>
     </footer>
-    
+
 </body>
 
 </html>

@@ -6,7 +6,6 @@
 }
 
 /* variables + html */
-
 :root {
     --header-color: #413A27;
     --t-color: #DE9B35;
@@ -24,7 +23,9 @@ body {
     color: white;
 
 }
-
+button {
+  font-family: "Gilroy-ExtraBold";
+}
 .transition {
     transition: 1s;
 }
@@ -38,14 +39,23 @@ header {
     background-color: var(--header-color);
     height: 67px;
 }
-
+header button {
+  height: 100%;
+  border: none;
+  background-color: var(--header-color);
+}
 header img {
     height: 100%;
     margin-left: 3%;
 }
 
 main {
+
     height: 100%;
+}
+
+button {
+  border:0;
 }
 
 /* footer */
@@ -105,9 +115,6 @@ footer > a > img {
     grid-template-rows: 2fr 1fr 1fr 0.5fr;
 }
 
-.acceuil:not(:target) {
-    display: none;
-}
 
 .acceuil a {
     text-decoration: none;
@@ -129,11 +136,14 @@ footer > a > img {
     justify-content: center;
     align-items: center;
     height: 90%;
-
+    width: 84%;
+    font-size: 64px;
 
 }
+.side:hover {
+  animation:
 
-.side p {}
+}
 
 .side_t {
     background-color: var(--t-color);
@@ -150,8 +160,8 @@ footer > a > img {
 }
 
 /* deuxieme page */
-#liste:target {
-    display: block;
+#liste {
+   display: none;
     height: 100%;
     width: 100%;
     background-color: var(--black-color);
@@ -167,22 +177,6 @@ footer > a > img {
 #main:target p {
     animation: apparitionItem 1s ease-in-out;
 
-}
-
-#liste:not(:target) {
-    display: none;
-}
-
-#main:not(:target) {
-    display: none;
-}
-
-#main {
-    display: run-in;
-}
-
-#liste {
-    display: none;
 }
 
 .conteneur_item {
@@ -281,7 +275,7 @@ footer > a > img {
     width: 40%;
 }
 .somme_total{
-    
+
 }
 /* animation */
 @keyframes apparitionItem {
@@ -333,9 +327,11 @@ footer > a > img {
     }
 
     .side {
+        font-size: 80px;
         margin-left: 20%;
         margin-right: 20%;
         margin-top: 0%;
+        width: 60%;
     }
 
     .conteneur_item {
@@ -347,6 +343,13 @@ footer > a > img {
         font-size: 16px;
         right: 30px;
         bottom: 30px;
+    }
+    #inventory {
+      width: 40%;
+      height: 600px;
+      right: 30%;
+      bottom: calc(50% - 300px);
+      font-size: 20px;
     }
 }
 
