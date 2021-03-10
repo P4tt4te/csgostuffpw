@@ -269,6 +269,7 @@ footer > a > img {
     display: flex;
     align-items: center;
     flex-direction: column;
+    overflow:scroll;
 }
 
 .total {
@@ -290,6 +291,23 @@ footer > a > img {
   margin-top: 4%;
   box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.4);
 
+}
+.guns_list {
+  color : white;
+  margin-top: 4%;
+  vertical-align: middle;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+}
+.del_guns {
+  background-color : red;
+  color: white;
+  border-radius: 15px;
+  height: 100%;
+}
+.inventory_list:last-child{
+  border-bottom: 4%;
 }
 /* animation */
 @keyframes apparitionItem {

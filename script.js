@@ -24,6 +24,7 @@ function changementPage(typeButton) {
 }
 
 var sommenbr = 0;
+var nbrarme = 0;
 
 function ajoutSomme(prix, nomArme) {
   var somme = document.getElementById('somme');
@@ -32,14 +33,33 @@ function ajoutSomme(prix, nomArme) {
   somme.innerHTML = sommenbr;
 
   var newDiv = document.createElement('div');
+  var newButton = document.createElement('button');
+  var delText = document.createTextNode('Del');
   var newText = document.createTextNode(nomArme);
   var inventory = document.querySelector('#inventory_list');
+  newDiv.className = 'guns_list';
+  newButton.className = 'del_guns';
   newDiv.appendChild(newText);
+  newDiv.appendChild(newButton);
+  newButton.appendChild(delText);
   inventory.appendChild(newDiv);
+  nbrarme = nbrarme + 1;
+  console.log(nbrarme);
 }
 
 function toutEnlever() {
   var somme = document.getElementById('somme');
+  var listeArme = document.querySelector('div.guns_list');
+  var inventory = document.querySelector('#inventory_list');
+  while (nbrarme > 0) {
+
+    inventory.removeChild(listeArme);
+    nbrarme = nbrarme - 1;
+    console.log(nbrarme);
+    listeArme = document.querySelector('div.guns_list');
+
+  }
+
   sommenbr = 0;
   somme.innerHTML = sommenbr;
 }
