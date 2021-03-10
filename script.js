@@ -31,3 +31,9 @@ function ajoutSomme(prix) {
   console.log(sommenbr);
   somme.innerHTML = sommenbr;
 }
+
+function toutEnlever() {
+  var somme = document.getElementById('somme');
+  sommenbr = 0;
+  somme.innerHTML = sommenbr;
+}
