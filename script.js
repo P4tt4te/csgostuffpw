@@ -25,11 +25,17 @@ function changementPage(typeButton) {
 
 var sommenbr = 0;
 
-function ajoutSomme(prix) {
+function ajoutSomme(prix, nomArme) {
   var somme = document.getElementById('somme');
   sommenbr = sommenbr + prix;
   console.log(sommenbr);
   somme.innerHTML = sommenbr;
+
+  var newDiv = document.createElement('div');
+  var newText = document.createTextNode(nomArme);
+  var inventory = document.querySelector('#inventory_list');
+  newDiv.appendChild(newText);
+  inventory.appendChild(newDiv);
 }
 
 function toutEnlever() {

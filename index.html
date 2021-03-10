@@ -35,7 +35,7 @@
         </div>
         <div id="liste" style="display:none">
             <ul class="conteneur_item">
-                <li class="pistol desert_eagle all" onclick="ajoutSomme(700)"><img src="content/guns/weapons/pistols/CSGO_Desert_Eagle_Inventory.webp" /><div class="text_guns"><p>Desert Eagle</p><p class="money">700 $</p></div></li>
+                <li class="pistol desert_eagle all" onclick="ajoutSomme(700, 'Deserteagle')"><img src="content/guns/weapons/pistols/CSGO_Desert_Eagle_Inventory.webp" /><div class="text_guns"><p>Desert Eagle</p><p class="money">700 $</p></div></li>
                 <li class="pistol r8_revolver all"><img src="content/guns/weapons/pistols/CSGO_R8_Revolver_Inventory.webp" /><div class="text_guns"><p>R8 Revolver</p><p class="money">600 $</p></div></li>
                 <li class="pistol dual_berettas all"><img src="content/guns/weapons/pistols/CSGO_Dual_Berettas_Inventory.webp" /><div class="text_guns"><p>Dual Berettas</p><p class="money">400 $</p></div></li>
                 <li class="pistol five_seven ct"><img src="content/guns/weapons/pistols/CSGO_Five-SeveN_Inventory.webp" /><div class="text_guns"><p>Five Seven</p><p class="money">500 $</p></div></li>
@@ -81,7 +81,7 @@
                 <li class="equipment defuse_kit ct"><img src="content/guns/equipement/Defuserhud_csgo.webp" /><div class="text_guns"><p>Defuse Kit</p><p class="money">400 $</p></div></li>
             </ul>
             <button class="view_inventory" onclick="masquer()"><p>View inventory</p></button>
-            <div id="inventory" style="display:none"><p>Inventory</p><div class="inventory_list"><button class="del_all" onclick="toutEnlever()">Delete All</button></div><div class="total"><p>Total :</p><p class="somme_total money"><span id="somme">0</span>  $</p></div></div>
+            <div id="inventory" style="display:none"><p>Inventory</p><div id="inventory_list" class="inventory_list"><button class="del_all" onclick="toutEnlever()">Delete All</button></div><div class="total"><p>Total :</p><p class="somme_total money"><span id="somme">0</span>  $</p></div></div>
         </div>
     </main>
     <footer>
