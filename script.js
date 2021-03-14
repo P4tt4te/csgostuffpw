@@ -31,7 +31,6 @@ function ajoutSomme(prix, nomArme) {
   sommenbr = sommenbr + prix;
   console.log(sommenbr);
   somme.innerHTML = sommenbr;
-
   var newDiv = document.createElement('div');
   var newButton = document.createElement('button');
   var delText = document.createTextNode('Del');
@@ -39,7 +38,10 @@ function ajoutSomme(prix, nomArme) {
   var inventory = document.querySelector('#inventory_list');
   newDiv.className = 'guns_list';
   newButton.className = 'del_guns';
-  newButton.classList.add(prix);
+  newButton.addEventListener('click', function () {
+    delEnleve(prix);
+  }, false);
+
   newDiv.appendChild(newText);
   newDiv.appendChild(newButton);
   newButton.appendChild(delText);
@@ -47,7 +49,6 @@ function ajoutSomme(prix, nomArme) {
   nbrarme = nbrarme + 1;
   console.log(nbrarme);
   // pour la fonction delete //
-  boutonsup = document.querySelector('button.del_guns');
 
 }
 
@@ -68,15 +69,15 @@ function toutEnlever() {
   somme.innerHTML = sommenbr;
 }
 
-var boutonsup;
-
-boutonsup.onmouseenter = function delEnleve() {
+function delEnleve(prix) {
   console.log('supprimer arme');
+  var somme = document.getElementById('somme');
   var listeArme = document.querySelector('div.guns_list');
   var inventory = document.querySelector('#inventory_list');
-  var somme = document.getElementById('somme');
   inventory.removeChild(listeArme);
   nbrarme = nbrarme - 1;
-  prix = somme - prix;
-  somme.innerHTML = prix;
+  sommenbr = sommenbr - prix;
+  somme.innerHTML = sommenbr;
+  console.log(sommenbr);
+
 };
