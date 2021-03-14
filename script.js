@@ -39,12 +39,16 @@ function ajoutSomme(prix, nomArme) {
   var inventory = document.querySelector('#inventory_list');
   newDiv.className = 'guns_list';
   newButton.className = 'del_guns';
+  newButton.classList.add(prix);
   newDiv.appendChild(newText);
   newDiv.appendChild(newButton);
   newButton.appendChild(delText);
   inventory.appendChild(newDiv);
   nbrarme = nbrarme + 1;
   console.log(nbrarme);
+  // pour la fonction delete //
+  boutonsup = document.querySelector('button.del_guns');
+
 }
 
 function toutEnlever() {
@@ -63,3 +67,16 @@ function toutEnlever() {
   sommenbr = 0;
   somme.innerHTML = sommenbr;
 }
+
+var boutonsup;
+
+boutonsup.onmouseenter = function delEnleve() {
+  console.log('supprimer arme');
+  var listeArme = document.querySelector('div.guns_list');
+  var inventory = document.querySelector('#inventory_list');
+  var somme = document.getElementById('somme');
+  inventory.removeChild(listeArme);
+  nbrarme = nbrarme - 1;
+  prix = somme - prix;
+  somme.innerHTML = prix;
+};
