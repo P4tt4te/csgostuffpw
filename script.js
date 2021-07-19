@@ -69,7 +69,7 @@ function toutEnlever() {
   somme.innerHTML = sommenbr;
 }
 
-function delEnleve(prix) {
+/*function delEnleve(prix) {
   console.log('supprimer arme');
   var somme = document.getElementById('somme');
   var listeArme = document.querySelector('div.guns_list');
@@ -80,4 +80,4 @@ function delEnleve(prix) {
   somme.innerHTML = sommenbr;
   console.log(sommenbr);
 
-};
+};*/

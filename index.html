@@ -37,7 +37,7 @@
         </div>
         <div id="liste" style="display:none">
             <ul id="conteneur_item" class="conteneur_item">
-                <li v-for='item in weapons' v-bind:class = 'item.team'><img v-bind:src="item.source" v-bind:alt="item.label"> <div class="text_guns"><p> {{item.label}}</p><p class="money">{{item.price}} $</p> </div></li>
+                <li v-for='item in weapons' v-bind:class = 'item.team' @click='ajoutInventaire(item)'><img v-bind:src="item.source" v-bind:alt="item.label"> <div class="text_guns"><p> {{item.label}}</p><p class="money">{{item.price}} $</p> </div></li>
                 <li class="pistol desert_eagle all" onclick="ajoutSomme(700, 'Desert eagle')"><img src="content/guns/weapons/pistols/CSGO_Desert_Eagle_Inventory.webp" alt="gun desert eagle"/><div class="text_guns"><p>Desert Eagle</p><p class="money">700 $</p></div></li>
                 <li class="pistol r8_revolver all" onclick="ajoutSomme(600, 'R8 Revolver')"><img src="content/guns/weapons/pistols/CSGO_R8_Revolver_Inventory.webp" alt="gun R8 revolver" /><div class="text_guns"><p>R8 Revolver</p><p class="money">600 $</p></div></li>
                 <li class="pistol dual_berettas all" onclick="ajoutSomme(400, 'Dual Berettas')"><img src="content/guns/weapons/pistols/CSGO_Dual_Berettas_Inventory.webp" alt="gun dual berettas" /><div class="text_guns"><p>Dual Berettas</p><p class="money">400 $</p></div></li>
@@ -90,9 +90,9 @@
                 <button class="del_all" onclick="toutEnlever()">Delete All</button>
               </div>
               <div class="total">
-                <p>Total :</p>
+                <p>Total : </p>
                 <p class="somme_total money">
-                  <span id="somme">0</span>  $</p>
+                  <span id="somme">{{cost}}</span>  $</p>
                 </div>
               </div>
         </div>
