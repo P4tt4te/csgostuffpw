@@ -39,29 +39,6 @@
             <ul id="conteneur_item" class="conteneur_item">
                 <li v-for='item in weapons' v-bind:class = 'item.team' @click='ajoutInventaire(item)'><img v-bind:src="item.source" v-bind:alt="item.label"> <div class="text_guns"><p> {{item.label}}</p><p class="money">{{item.price}} $</p> </div></li>
               
-                <li class="rifle ak47 t"><img src="content/guns/weapons/rifles/CSGO_AK-47_Inventory.webp" alt="gun ak-47" /><div class="text_guns"><p>AK-47</p><p class="money">2700 $</p></div></li>
-                <li class="rifle aug ct"><img src="content/guns/weapons/rifles/CSGO_AUG_Inventory.webp" alt="gun aug" /><div class="text_guns"><p>AUG</p><p class="money">3300 $</p></div></li>
-                <li class="rifle famas ct"><img src="content/guns/weapons/rifles/CSGO_FAMAS_Inventory.webp" alt="gun famas" /><div class="text_guns"><p>FAMAS</p><p class="money">2050 $</p></div></li>
-                <li class="rifle galil_ar t"><img src="content/guns/weapons/rifles/CSGO_Galil_AR_Inventory.webp" alt="gun galil ar" /><div class="text_guns"><p>Galil AR</p><p class="money">1800 $</p></div></li>
-                <li class="rifle m4a4 ct"><img src="content/guns/weapons/rifles/CSGO_M4A4_Inventory.webp" alt="gun m4A4" /><div class="text_guns"><p>M4A4</p><p class="money">3100 $</p></div></li>
-                <li class="rifle m4a1_s ct"><img src="content/guns/weapons/rifles/CSGO_M4A1-S_Inventory.webp" alt="gun M4A1-S" /><div class="text_guns"><p>M4A1-S</p><p class="money">2900 $</p></div></li>
-                <li class="rifle sg_553 t"><img src="content/guns/weapons/rifles/CSGO_SG_553_Inventory.webp" alt="gun sg 553" /><div class="text_guns"><p>SG 553</p><p class="money">3000 $</p></div></li>
-                <li class="lmg m249 all"><img src="content/guns/weapons/lmg/CSGO_M249_Inventory.webp" alt="gun m249" /><div class="text_guns"><p>M249</p><p class="money">5200 $</p></div></li>
-                <li class="lmg negev all"><img src="content/guns/weapons/lmg/CSGO_Negev_Inventory.webp" alt="gun negev" /><div class="text_guns"><p>Negev</p><p class="money">1700 $</p></div></li>
-                <li class="sniper awp all"><img src="content/guns/weapons/sniper/CSGO_AWP_Inventory.webp" alt="gun awp" /><div class="text_guns"><p>AWP</p><p class="money">4750 $</p></div></li>
-                <li class="sniper g3sg1 t"><img src="content/guns/weapons/sniper/CSGO_G3SG1_Inventory.webp" alt="gun g3sg1" /><div class="text_guns"><p>G3SG1</p><p class="money">5000 $</p></div></li>
-                <li class="sniper scar20 ct"><img src="content/guns/weapons/sniper/CSGO_SCAR-20_Inventory.webp" alt="gun scar20" /><div class="text_guns"><p>SCAR-20</p><p class="money">5000 $</p></div></li>
-                <li class="sniper ssg08 all"><img src="content/guns/weapons/sniper/CSGO_SSG_08_Inventory.webp" alt="gun ssg08" /><div class="text_guns"><p>SSG 08</p><p class="money">1700 $</p></div></li>
-                <li class="grenade he all"><img src="content/guns/grenades/Hegrenadehud_csgo.webp" alt="grenade he" /><div class="text_guns"><p>HE Grenade</p><p class="money">300 $</p></div></li>
-                <li class="grenade molotov t"><img src="content/guns/grenades/Molotovhud.webp" alt="molotov" /><div class="text_guns"><p>Molotov</p><p class="money">400 $</p></div></li>
-                <li class="grenade incendiary ct"><img src="content/guns/grenades/Incgrenadehud_csgo.webp" alt="incendiary" /><div class="text_guns"><p>Incendiary</p><p class="money">600 $</p></div></li>
-                <li class="grenade flashbang all"><img src="content/guns/grenades/Flashbanghud_csgo.webp" alt="flashbang" /><div class="text_guns"><p>Flashbang</p><p class="money">200 $</p></div></li>
-                <li class="grenade smoke all"><img src="content/guns/grenades/Smokegrenadehud_csgo.webp" alt="smoke grenade" /><div class="text_guns"><p>Smoke</p><p class="money">300 $</p></div></li>
-                <li class="grenade decoy all"><img src="content/guns/grenades/Decoyhud_csgo.webp" alt="decoy grenade" /><div class="text_guns"><p>Decoy</p><p class="money">50 $</p></div></li>
-                <li class="equipment zeus27 all"><img src="content/guns/equipement/Taserhud.webp" alt="zeusx27" /><div class="text_guns"><p>Zeus x27</p><p class="money">200 $</p></div></li>
-                <li class="equipment kevlar all"><img src="content/guns/equipement/Kevlarhud_csgo.webp" alt="kevlar only" /><div class="text_guns"><p>Kevlar Vest</p><p class="money">650 $</p></div></li>
-                <li class="equipment kevlar_helmet all"><img src="content/guns/equipement/Assaultsuithud_csgo.webp" alt="kevlar and helmet" /><div class="text_guns"><p>Kevlar and Helmet</p><p class="money">1000 $</p></div></li>
-                <li class="equipment defuse_kit ct"><img src="content/guns/equipement/Defuserhud_csgo.webp" alt="defuse kit" /><div class="text_guns"><p>Defuse Kit</p><p class="money">400 $</p></div></li>
             </ul>
             <button class="view_inventory" onclick="masquer()">View inventory</button>
             <div id="inventory" style="display:none">
