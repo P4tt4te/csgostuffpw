@@ -87,7 +87,11 @@
             <div id="inventory" style="display:none">
               <p>Inventory</p>
               <div id="inventory_list" class="inventory_list">
-                <button class="del_all" onclick="toutEnlever()">Delete All</button>
+                <button v-show='list > 0' class="del_all" @click="toutSupprimer()">Delete All</button>
+                <div class="guns_list" v-for="item in weapons" v-show="item.number > 0">
+                  <span>{{item.number}}</span>{{item.label}}
+                  <button class="del_guns" @click='del(item)'>Del</button>
+                </div>
               </div>
               <div class="total">
                 <p>Total : </p>
