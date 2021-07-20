@@ -38,27 +38,7 @@
         <div id="liste" style="display:none">
             <ul id="conteneur_item" class="conteneur_item">
                 <li v-for='item in weapons' v-bind:class = 'item.team' @click='ajoutInventaire(item)'><img v-bind:src="item.source" v-bind:alt="item.label"> <div class="text_guns"><p> {{item.label}}</p><p class="money">{{item.price}} $</p> </div></li>
-                <li class="pistol desert_eagle all" onclick="ajoutSomme(700, 'Desert eagle')"><img src="content/guns/weapons/pistols/CSGO_Desert_Eagle_Inventory.webp" alt="gun desert eagle"/><div class="text_guns"><p>Desert Eagle</p><p class="money">700 $</p></div></li>
-                <li class="pistol r8_revolver all" onclick="ajoutSomme(600, 'R8 Revolver')"><img src="content/guns/weapons/pistols/CSGO_R8_Revolver_Inventory.webp" alt="gun R8 revolver" /><div class="text_guns"><p>R8 Revolver</p><p class="money">600 $</p></div></li>
-                <li class="pistol dual_berettas all" onclick="ajoutSomme(400, 'Dual Berettas')"><img src="content/guns/weapons/pistols/CSGO_Dual_Berettas_Inventory.webp" alt="gun dual berettas" /><div class="text_guns"><p>Dual Berettas</p><p class="money">400 $</p></div></li>
-                <li class="pistol five_seven ct"><img src="content/guns/weapons/pistols/CSGO_Five-SeveN_Inventory.webp" alt="gun five seven" /><div class="text_guns"><p>Five Seven</p><p class="money">500 $</p></div></li>
-                <li class="pistol glock_18 t"><img src="content/guns/weapons/pistols/CSGO_Glock-18_Inventory.webp" alt="gun glock 18" /><div class="text_guns"><p>Glock-18</p><p class="money">200 $</p></div></li>
-                <li class="pistol p2000 ct"><img src="content/guns/weapons/pistols/CSGO_P2000_Inventory.webp" alt="gun p2000" /><div class="text_guns"><p>P2000</p><p class="money">200 $</p></div></li>
-                <li class="pistol usp_s ct"><img src="content/guns/weapons/pistols/CSGO_USP-S_Inventory.webp" alt="gun usp-s" /><div class="text_guns"><p>USP-S</p><p class="money">200 $</p></div></li>
-                <li class="pistol p250 all"><img src="content/guns/weapons/pistols/CSGO_P250_Inventory.webp" alt="gun p250" /><div class="text_guns"><p>P250</p><p class="money">300 $</p></div></li>
-                <li class="pistol cz75_auto all"><img src="content/guns/weapons/pistols/CSGO_CZ75-Auto_Inventory.webp" alt="gun cz-75" /><div class="text_guns"><p>CZ75 Auto</p><p class="money">500 $</p></div></li>
-                <li class="pistol tec9 t"><img src="content/guns/weapons/pistols/CSGO_Tec-9_Inventory.webp" alt="gun tec 9" /><div class="text_guns"><p>Tec-9</p><p class="money">500 $</p></div></li>
-                <li class="shotgun mag7 ct"><img src="content/guns/weapons/shotguns/CSGO_MAG-7_Inventory.webp" alt="gun mag 7" /><div class="text_guns"><p>Mag-7</p><p class="money">1300 $</p></div></li>
-                <li class="shotgun nova all"><img src="content/guns/weapons/shotguns/CSGO_Nova_Inventory.webp" alt="gun nova" /><div class="text_guns"><p>Nova</p><p class="money">1050 $</p></div></li>
-                <li class="shotgun sawed_off t"><img src="content/guns/weapons/shotguns/CSGO_Sawed-Off_Inventory.webp" alt="gun sawed off" /><div class="text_guns"><p>Sawed-off</p><p class="money">1100 $</p></div></li>
-                <li class="shotgun xm1014 all"><img src="content/guns/weapons/shotguns/CSGO_XM1014_Inventory.webp" alt="gun xm1014" /><div class="text_guns"><p>XM1014</p><p class="money">2000 $</p></div></li>
-                <li class="smg pp_bizon all"><img src="content/guns/weapons/smg/CSGO_PP-Bizon_Inventory.webp" alt="gun pp-bizon" /><div class="text_guns"><p>PP-Bizon</p><p class="money">1400 $</p></div></li>
-                <li class="smg mac_10 t"><img src="content/guns/weapons/smg/CSGO_MAC-10_Inventory.webp" alt="gun mac-10" /><div class="text_guns"><p>MAC-10</p><p class="money">1050 $</p></div></li>
-                <li class="smg mp7 all"><img src="content/guns/weapons/smg/CSGO_MP7_Inventory.webp" alt="gun mp7" /><div class="text_guns"><p>MP7</p><p class="money">1500 $</p></div></li>
-                <li class="smg mp5_sd all"><img src="content/guns/weapons/smg/CSGO_MP5-SD_Inventory.webp" alt="gun mp5-sd" /><div class="text_guns"><p>MP5-SD</p><p class="money">1500 $</p></div></li>
-                <li class="smg mp9 ct"><img src="content/guns/weapons/smg/CSGO_MP9_Inventory.webp" alt="gun mp9" /><div class="text_guns"><p>MP9</p><p class="money">1250 $</p></div></li>
-                <li class="smg p90 all"><img src="content/guns/weapons/smg/CSGO_P90_Inventory.webp" alt="gun p90" /><div class="text_guns"><p>P90</p><p class="money">2350 $</p></div></li>
-                <li class="smg ump45 all"><img src="content/guns/weapons/smg/CSGO_UMP-45_Inventory.webp" alt="gun ump45" /><div class="text_guns"><p>UMP-45</p><p class="money">1200 $</p></div></li>
+              
                 <li class="rifle ak47 t"><img src="content/guns/weapons/rifles/CSGO_AK-47_Inventory.webp" alt="gun ak-47" /><div class="text_guns"><p>AK-47</p><p class="money">2700 $</p></div></li>
                 <li class="rifle aug ct"><img src="content/guns/weapons/rifles/CSGO_AUG_Inventory.webp" alt="gun aug" /><div class="text_guns"><p>AUG</p><p class="money">3300 $</p></div></li>
                 <li class="rifle famas ct"><img src="content/guns/weapons/rifles/CSGO_FAMAS_Inventory.webp" alt="gun famas" /><div class="text_guns"><p>FAMAS</p><p class="money">2050 $</p></div></li>
