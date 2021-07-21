@@ -241,7 +241,7 @@ function lancer(evt) {
             price: 1700,
             team: 'all',
             type: 'lmg',
-            source: 'content/guns/weapons/lmg/CSGO_Negev_Inventory.web',
+            source: 'content/guns/weapons/lmg/CSGO_Negev_Inventory.webp',
             number: 0
           },
           {
@@ -384,9 +384,19 @@ function lancer(evt) {
     }
   })
 
-
   app.mount('#liste');
 
+  const listsel = Vue.createApp({
+    data(){
+      return {
+        team: 't',
+        money: '10000',
+        name: ''
+      }
+    }
+  })
+
+  listsel.mount('#tri_list');
 
 
 

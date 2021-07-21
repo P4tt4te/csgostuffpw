@@ -18,6 +18,11 @@
         <button id="boutonhome" onclick="changementPage(0)">
             <img src="content/header/logo.png" alt="logo du site et bouton pour revenir à la premère page du site" />
         </button>
+        <div id="tri_list">
+          <input class="tri_nom tri-box" type="text" v-model="name" placeholder="name ...">
+          <input class="tri_equipe tri-box" type="button" value="CT">
+          <input class="tri_cout tri-box" type="number" name="" value="">
+        </div>
     </header>
     <main>
         <div id="main" class="acceuil" style="display:grid">
@@ -38,7 +43,7 @@
         <div id="liste" style="display:none">
             <ul id="conteneur_item" class="conteneur_item">
                 <li v-for='item in weapons' v-bind:class = 'item.team' @click='ajoutInventaire(item)'><img v-bind:src="item.source" v-bind:alt="item.label"> <div class="text_guns"><p> {{item.label}}</p><p class="money">{{item.price}} $</p> </div></li>
-              
+
             </ul>
             <button class="view_inventory" onclick="masquer()">View inventory</button>
             <div id="inventory" style="display:none">

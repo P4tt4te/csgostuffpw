@@ -14,70 +14,22 @@ function masquer() {
 function changementPage(typeButton) {
   var sectionInfoMain = document.querySelector('#main');
   var sectionInfoListe = document.querySelector('#liste');
+  var header = document.querySelector('header');
   if (typeButton == 1) {
     sectionInfoMain.style.display = 'none';
     sectionInfoListe.style.display = 'grid';
+    if (window.matchMedia("(min-width: 1025px)").matches) {
+      header.style.height = '180px';
+    } else {
+      header.style.height = '134px';
+    }
   } else {
     sectionInfoMain.style.display = 'grid';
     sectionInfoListe.style.display = 'none';
+    if (window.matchMedia("(min-width: 1025px)").matches) {
+      header.style.height = '90px';
+    } else {
+      header.style.height = '67px';
+    }
   }
 }
-
-var sommenbr = 0;
-var nbrarme = 0;
-
-function ajoutSomme(prix, nomArme) {
-  var somme = document.getElementById('somme');
-  sommenbr = sommenbr + prix;
-  console.log(sommenbr);
-  somme.innerHTML = sommenbr;
-  var newDiv = document.createElement('div');
-  var newButton = document.createElement('button');
-  var delText = document.createTextNode('Del');
-  var newText = document.createTextNode(nomArme);
-  var inventory = document.querySelector('#inventory_list');
-  newDiv.className = 'guns_list';
-  newButton.className = 'del_guns';
-  newButton.addEventListener('click', function () {
-    delEnleve(prix);
-  }, false);
-
-  newDiv.appendChild(newText);
-  newDiv.appendChild(newButton);
-  newButton.appendChild(delText);
-  inventory.appendChild(newDiv);
-  nbrarme = nbrarme + 1;
-  console.log(nbrarme);
-  // pour la fonction delete //
-
-}
-
-function toutEnlever() {
-  var somme = document.getElementById('somme');
-  var listeArme = document.querySelector('div.guns_list');
-  var inventory = document.querySelector('#inventory_list');
-  while (nbrarme > 0) {
-
-    inventory.removeChild(listeArme);
-    nbrarme = nbrarme - 1;
-    console.log(nbrarme);
-    listeArme = document.querySelector('div.guns_list');
-
-  }
-
-  sommenbr = 0;
-  somme.innerHTML = sommenbr;
-}
-
-/*function delEnleve(prix) {
-  console.log('supprimer arme');
-  var somme = document.getElementById('somme');
-  var listeArme = document.querySelector('div.guns_list');
-  var inventory = document.querySelector('#inventory_list');
-  inventory.removeChild(listeArme);
-  nbrarme = nbrarme - 1;
-  sommenbr = sommenbr - prix;
-  somme.innerHTML = sommenbr;
-  console.log(sommenbr);
-
-};*/
