@@ -360,7 +360,7 @@ function lancer(evt) {
         cost: 0,
         list: 0,
         team: 't',
-        money: '10000',
+        money: '',
         name: ''
       }
     },
@@ -390,7 +390,11 @@ function lancer(evt) {
       listeFiltrer() {
         return this.weapons.filter(item => {
           var word = item.label;
-          return word.toLowerCase().includes(this.name.toLowerCase());
+          var price = item.price;
+          if (item.price <= this.money || this.money == '') {
+            return word.toLowerCase().includes(this.name.toLowerCase());
+          }
+
         })
       }
     }
