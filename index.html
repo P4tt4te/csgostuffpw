@@ -42,7 +42,7 @@
         </div>
         <div id="liste" style="display:none">
             <ul id="conteneur_item" class="conteneur_item">
-                <li v-for='item in weapons' v-bind:class = 'item.team' @click='ajoutInventaire(item)'><img v-bind:src="item.source" v-bind:alt="item.label"> <div class="text_guns"><p> {{item.label}}</p><p class="money">{{item.price}} $</p> </div></li>
+                <li v-for='item in listeFiltrer' v-bind:class = 'item.team' @click='ajoutInventaire(item)'><img v-bind:src="item.source" v-bind:alt="item.label"> <div class="text_guns"><p> {{item.label}}</p><p class="money">{{item.price}} $</p> </div></li>
 
             </ul>
             <button class="view_inventory" onclick="masquer()">View inventory</button>

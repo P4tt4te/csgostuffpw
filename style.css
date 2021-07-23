@@ -17,6 +17,7 @@
 html {
     font-family: "Gilroy-ExtraBold";
     user-select: none;
+    background-color: var(--black-color);
 }
 
 body {

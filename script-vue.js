@@ -358,7 +358,10 @@ function lancer(evt) {
           },
         ],
         cost: 0,
-        list: 0
+        list: 0,
+        team: 't',
+        money: '10000',
+        name: ''
       }
     },
     methods: {
@@ -381,22 +384,20 @@ function lancer(evt) {
         }
 
       }
-    }
-  })
-
-  app.mount('#liste');
-
-  const listsel = Vue.createApp({
-    data(){
-      return {
-        team: 't',
-        money: '10000',
-        name: ''
+    },
+    computed: {
+      // filtre le tableau des armes pour rendre le résultat de la liste //
+      listeFiltrer() {
+        return this.weapons.filter(item => {
+          var word = item.label;
+          return word.toLowerCase().includes(this.name.toLowerCase());
+        })
       }
     }
   })
 
-  listsel.mount('#tri_list');
+  app.mount('body');
+
 
 
 
