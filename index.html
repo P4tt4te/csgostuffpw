@@ -20,7 +20,7 @@
         </button>
         <div id="tri_list">
           <input class="tri_nom tri-box" type="text" v-model="name" placeholder="name ...">
-          <input class="tri_equipe tri-box" type="button" value="CT">
+          <input class="tri_equipe tri-box" type="button" @click="changeTeam" v-bind:value="team">
           <input class="tri_cout tri-box" type="number" v-model="money" placeholder="price ..." max='5000' step='100'>
         </div>
     </header>
@@ -30,12 +30,12 @@
                 <p>Choose<br>Side</p>
             </div>
             <a id="boutonlistet">
-                <button class="side side_t" onclick="changementPage(1)">
+                <button class="side side_t" onclick="changementPage(1)" @click="setTeam('t')">
                     T
                 </button>
             </a>
             <a id="boutonlistect">
-                <button class="side side_ct" onclick="changementPage(1)">
+                <button class="side side_ct" onclick="changementPage(1)" @click="setTeam('ct')">
                     CT
                 </button>
             </a>

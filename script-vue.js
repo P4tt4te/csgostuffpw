@@ -383,6 +383,18 @@ function lancer(evt) {
           this.weapons[i].number = 0;
         }
 
+      },
+      changeTeam() {
+        if (this.team == 't') {
+          this.team = 'ct';
+        } else if (this.team == 'ct') {
+          this.team = 'all';
+        } else if (this.team == 'all') {
+          this.team = 't';
+        }
+      },
+      setTeam(value) {
+        this.team = value;
       }
     },
     computed: {
@@ -391,10 +403,17 @@ function lancer(evt) {
         return this.weapons.filter(item => {
           var word = item.label;
           var price = item.price;
-          if (item.price <= this.money || this.money == '') {
-            return word.toLowerCase().includes(this.name.toLowerCase());
-          }
-
+          var equipe = item.team;
+          if (this.team == equipe || equipe == 'all') {
+            if (item.price <= this.money || this.money == '') {
+              return word.toLowerCase().includes(this.name.toLowerCase());
+            }
+            } else if (this.team == 'all') {
+              if (item.price <= this.money || this.money == '') {
+                return word.toLowerCase().includes(this.name.toLowerCase());
+              }
+            }
+          
         })
       }
     }
